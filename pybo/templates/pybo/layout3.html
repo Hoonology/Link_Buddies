@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method ="post">
+<table>
+    <tr>
+        <td><label>제출내용</label><form method="post">
+            {% csrf_token %}
+            <textarea name="content" id="content" rows="10" placeholder="연락수단을 적어주세요"></textarea>
+            <input type="submit" value="답변등록"></form>
+        </td>
+    </tr>
+
+</table>
+
+</form>
+{% endblock %}

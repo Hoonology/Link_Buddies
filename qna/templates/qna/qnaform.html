@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% if qna %}
+    {% if user.id != qna.author.id  %}
+        <input type="hidden" id="loginrequired">
+    {% endif %}
+{% endif %}
+<form method="post">
+{% csrf_token %}
+    <div>
+    <i id="textlen">0</i><i>/1000</i>
+    비밀글<input type="radio" class="form-control" id="yes" name="secret_checked" value="yes">
+    공개글<input type="radio" class="form-control" id="no" name="secret_checked" checked="true" value="no">
+    </div>
+    {% if qna %}
+    <div>
+        <input type="text" class="form-control" name="title" id="title" value="{{qna.title}}" required autocomplete="off" minlength="1" maxlength="100" placeholder="제목을 입력하세요.">
+    </div>
+    <div>
+        <textarea class="form-control" name="question" id="question" required autocomplete="off" minlength="5" maxlength="999" placeholder="내용을 입력하세요." cols="80" rows="20">{{qna.question}}</textarea>
+<!--        <input type="hidden" value="hiddencss : resize:none">-->
+    </div>
+    {% else %}
+    <div>
+        <input type="text" class="form-control" name="title" id="title" value="{{form.title.value}}" required autocomplete="off" minlength="1" maxlength="100" placeholder="제목을 입력하세요.">
+    </div>
+    <div>
+        <textarea class="form-control" name="question" id="question" required autocomplete="off" minlength="5" maxlength="999" placeholder="내용을 입력하세요." cols="80" rows="20"></textarea>
+<!--        <input type="hidden" value="hiddencss : resize:none">-->
+    </div>
+        {% endif %}
+    <div>
+        <button type="button" class="go_list">목록으로</button>
+        {% if qna %}
+        <button type="submit" class="modify" id="modify">편집</button>
+        {% else %}
+        <button type="submit" class="submit" id="submit">등록</button>
+        {% endif %}
+    </div>
+</form>
+
+<script src="{% static 'qna/js/form.js'%}"></script>
+{% endblock %}

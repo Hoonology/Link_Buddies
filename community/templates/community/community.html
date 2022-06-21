@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'community/community.css'%}">
+
+<div class="new">
+  <p class="new">.</p>
+</div>
+
+<div class="info">
+  <h1>{{user.region}}의 수다방</h1>
+</div>
+
+<div class="category">
+  <h3>카테고리 자리</h3>
+</div>
+
+<p class="new_btn">+</p>
+
+<form method="post">
+{% csrf_token %}
+<div class="undisplay" id="edit">
+
+  <textarea class="form-control" name="content" id="content" required autocomplete="off" minlength="1" maxlength="799" placeholder="당신의 일상을 공유해보세요." cols="60" rows="5">{{qna.question}}</textarea>
+<!--        <input type="hidden" value="hiddencss : resize:none">-->
+  <i id="textlen">0</i><i>/800</i>
+  <input type="radio" class="form-control" id="1" name="category" value="1" checked="true" hidden="hidden">
+  <button class="upload" type="submit"></button>
+</div>
+</form>
+
+<div class="content_bx">
+    {% for content in content_list%}
+  <div class="content">
+    <p class="author">{{content.author}}</p>
+    <p class="create_time">{{content.create_date}}</p>
+    {%if user.id == qna.author.id or user.is_staff == 1 %}
+    <p class="more">...(text_rotate)</p>
+    <div class="undisplay" id="more">
+      {%if user.id == qna.author.id %}
+      <p class="edit">편집</p>
+      {% endif %}
+      <p class="delete">삭제</p>
+    </div>
+    {% else %}
+    <p class="report">신고</p>
+    {% endif %}
+    <p class="content"></p>
+<!--    <img>-->
+    <p class="category">{{content.category}}</p>
+    <div class="likes">
+      <img src="" alt="">
+      <p class="likes"></p>
+    </div>
+    <div class="comment">
+      <img src="" alt="">
+      <p class="comment"></p>
+    </div>
+  </div>
+    {%endfor%}
+
+</div>
+
+<div class="new_content">
+  <button type="button"></button>
+</div>
+
+
+<script src="{% static 'community/community.js'%}"></script>
+{% endblock %}

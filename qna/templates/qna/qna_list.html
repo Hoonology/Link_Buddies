@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'qna/css/list.css'%}">
+<div>
+  <h1>배너 자리</h1>
+</div>
+<table>
+  <tr>
+    <th>목록</th>
+    <th>등록일</th>
+    <th>답변</th>
+
+  </tr>
+{% for qna in qna_list %}
+  <tr>
+  {% if user.id == qna.author.id or user.is_staff == 1 %}
+  <td class="title" id="{{qna.id}}"><a href="{% url 'qna:qna_detail' qna.id %}">{{qna.title}}</a></td>
+  {% else %}
+    {% if qna.secret == "yes" %}
+    <td><i>비밀글입니다.</i></td>
+    {% else %}
+    <td class="title" id="{{qna.id}}"><a href="{% url 'qna:qna_detail' qna.id %}">{{qna.title}}</a></td>
+    {% endif %}
+  {% endif %}
+    <td class="create_date">{{qna.create_date}}</td>
+    {% if qna.answer %}
+    <td class="answered">답변 완료</td>
+    {% else %}
+    <td class="notanswered"></td>
+    {% endif %}
+  </tr>
+{% endfor %}
+</table>
+<input type="button" value="글쓰기" id="form">
+<script src="{% static 'qna/js/list.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method ="post">
+<table>
+    <tr>
+        <td><label>제목</label>
+    </tr>
+    <tr>
+        <td><label>내용</label>
+        </td>
+    </tr>
+</table>
+{% csrf_token %}
+<button> <a href="http://127.0.0.1:8000/pybo/layout3/">신청</a></button>
+</form>
+{% endblock %}

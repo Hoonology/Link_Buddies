@@ -1,0 +1,81 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+{% include 'header.html' %}
+<link rel="stylesheet" href="{% static 'todo.css' %}">
+<table>
+
+    <tr>
+        <th>
+            <legend>지역</legend>
+            <p><b>지역을 선택해주세요</b></p>
+            <label><input type="radio" name="gu">강남구</label>
+            <label><input type="radio" name="gu">강동구</label>
+            <label><input type="radio" name="gu">강북구</label>
+            <label><input type="radio" name="gu">강서구</label>
+            <label><input type="radio" name="gu">관악구</label>
+            <label><input type="radio" name="gu">광진구</label>
+            <label><input type="radio" name="gu">구로구</label>
+            <label><input type="radio" name="gu">금천구</label>
+            <label><input type="radio" name="gu">노원구</label>
+            <label><input type="radio" name="gu">도봉구</label>
+            <label><input type="radio" name="gu">동대문구</label>
+            <label><input type="radio" name="gu">동작구</label>
+            <label><input type="radio" name="gu">마포구</label>
+            <label><input type="radio" name="gu">강남구</label>
+            <label><input type="radio" name="gu">서대문구</label>
+            <label><input type="radio" name="gu">서초구</label>
+            <label><input type="radio" name="gu">성동구</label>
+            <label><input type="radio" name="gu">성북구</label>
+            <label><input type="radio" name="gu">송파구</label>
+            <label><input type="radio" name="gu">양천구</label>
+            <label><input type="radio" name="gu">영등포구</label>
+            <label><input type="radio" name="gu">용산구</label>
+            <label><input type="radio" name="gu">은평구</label>
+            <label><input type="radio" name="gu">종로구</label>
+            <label><input type="radio" name="gu">중구</label>
+            <label><input type="radio" name="gu">중랑구</label>
+
+
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <legend>카테고리</legend>
+            <label>카테고리를 선택해주세요</label>
+            <select name="category">
+                <option value="1">게임</option>
+                <optgroup label="공부">
+                    <option value="2_1">코딩</option>
+                    <option value="2_2">수능</option>
+                    <option value="2_3">영어</option>
+                </optgroup>
+                </option>
+                <option value="3">스포츠</option>
+            </select>
+
+        </th>
+    </tr>
+</table>
+<table id="customers">
+    <tr>
+        <th>순번</th>
+        <th>제목</th>
+        <th>지역</th>
+        <th>파티현황</th>
+    </tr>
+    {%for question in question_list%}
+    <tr>
+        <td>공란dldldldldl</td>
+        <td><a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a></td>
+        <td>dd</td>
+        <td>dd</td>
+    </tr>
+    {%endfor%}
+
+</table>
+
+{% csrf_token %}
+<button><a href="http://127.0.0.1:8000/pybo/layout/">등록</a></button>
+
+{% endblock %}

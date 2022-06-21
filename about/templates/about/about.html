@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<title>너와 나의 연결고리</title>
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{% static 'about/css/styles.css' %}" rel="stylesheet"/>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <!--                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="" alt="..." /></div>-->
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{% static 'about/images/people.png' %}">
+            </div>
+
+            <div class="col-md-6">
+                <div class="small mb-1">Link Buddies</div>
+                <h1 class="display-5 fw-bolder">너와 나의 연결고리</h1>
+
+                <p class="lead">'우리'로 살아가는 삶은 값지다는 것을 우리 모두가 알고 있습니다.</p>
+                <p class="lead">우리가 되기 위해서는 모이는 '장소'가 있어야 합니다.<br><b>'너와 나의 연결고리'</b>에서 근처에 있는 사람들과 생각, 취미, 꿈을 함께 공유하세요
+                </p>
+                <p class="lead">우리로 살아가는 행복을 함께 누려 보아요</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Team-->
+<div class="new_contain">
+    <section class="page-section" id="team">
+        <div class="container">
+
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                <h3 class="section-subheading text-muted">For Sure</h3>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="row_new">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/태우.png' %}">
+                            <h4>TW</h4>
+                            <p class="text-muted">Team Leader</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/gojip" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/wjdxodn0895/"
+                               target='_blank' aria-label="InstagramIcon">
+                                <img class="icons" src="{% static 'about/images/instagram.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2"
+                               href="mailto:terry9508@naver.com?subject= TW 님께 문의합니다!" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/경민.png' %}">
+                            <h4>KK</h4>
+                            <p class="text-muted">Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/GyeoungMin"
+                               target='_blank'>
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2"
+                               href="mailto:rlarudals_10@naver.com?subject= KK 님께 문의합니다!" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/미리.png' %}">
+                            <h4>MR</h4>
+                            <p class="text-muted">Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/Kang00009" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+
+                            <a class="btn btn-dark btn-social mx-2" href="http://www.instagram.com/_mi_0514"
+                               target='_blank'
+                               aria-label="InstagramIcon">
+                                <img class="icons" src="{% static 'about/images/instagram.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2"
+                               href="mailto:kmr1309@naver.com?subject= MR 님께 문의합니다!" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/성훈.png' %}">
+                            <h4>Teddy Kim</h4>
+                            <p class="text-muted">Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/Hoonology" target="_blank">
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+                            </a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ho.o_ny/"
+                               target='_blank' aria-label="InstagramIcon">
+                                <img class="icons" src="{% static 'about/images/instagram.png'%}"></a>
+
+                            <a class="btn btn-dark btn-social mx-2"
+                               href="mailto:mase306@gmail.com?subject= Teddy Kim 님께 문의합니다!" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/소빈.png' %}">
+                            <h4>Ysob</h4>
+                            <p class="text-muted">Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/sob-n" target='_blank'
+                               aria-label="GithubIcon">
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2"
+                               href="mailto:ysb98834@naver.com?subject= Ysob 님께 문의합니다!" target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="card-img-top" src="{% static 'about/images/carami.png' %}">
+                            <h4>Carami</h4>
+                            <p class="text-muted">Director</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/carami" target='_blank'
+                               aria-label="GithubIcon">
+                                <img class="icons" src="{% static 'about/images/github_icons.png'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/carami1104"
+                               target='_blank'
+                               aria-label="GithubIcon">
+                                <img class="icons" src="{% static 'about/images/1212.jpeg'%}"></a>
+                            <a class="btn btn-dark btn-social mx-2" href="carami@gmail.com?subject= Carami 님께 문의합니다!"
+                               target='_blank'>
+                                <img class="icons" src="{% static 'about/images/email2.png'%}"></a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+</div>
+</section>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Contact-->
+<section class="page-section" id="contact">
+
+    <div class="container">
+
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Do not hesitate to contact us</h3>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <form id="contactForm">
+        <div class="row align-items-stretch mb-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- Name input-->
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *"
+                           data-sb-validations="required"/>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
+                <div class="form-group">
+                    <!-- Email address input-->
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *"
+                           data-sb-validations="required,email"/>
+                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                </div>
+                <div class="form-group mb-md-0">
+                    <!-- Phone number input-->
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
+                           data-sb-validations="required"/>
+                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group form-group-textarea mb-md-0">
+                    <!-- Message input-->
+                    <textarea class="form-control" id="message" placeholder="Your Message *"
+                              data-sb-validations="required"></textarea>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Submit success message-->
+        <!---->
+        <!-- This is what your users will see when the form-->
+        <!-- has successfully submitted-->
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center text-white mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                To activate this form, sign up at
+                <br/>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <!-- Submit error message-->
+        <!---->
+        <!-- This is what your users will see when there is-->
+        <!-- an error submitting the form-->
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <!-- Submit Button-->
+        <div class="text-center"><a href="mailto:mase306@gmail.com?subject=문의합니다!">
+            <button class="about-btn" id="submitButton" type="submit">Send
+                Message
+            </button>
+        </a></div>
+    </form>
+    </div>
+</section>
+{% endblock %}
+
+<!--&lt;!&ndash; Footer&ndash;&gt;-->
+<!--<footer class="py-5 bg-dark">-->
+<!--    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>-->
+<!--</footer>-->
+<!--&lt;!&ndash;&lt;!&ndash; Bootstrap core JS&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; Core theme JS&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="js/scripts.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&ndash;&gt;-->
+<!--&lt;!&ndash;        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"&ndash;&gt;-->
+<!--&lt;!&ndash;        crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"&ndash;&gt;-->
+<!--&lt;!&ndash;        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"&ndash;&gt;-->
+<!--&lt;!&ndash;        crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"&ndash;&gt;-->
+<!--&lt;!&ndash;        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"&ndash;&gt;-->
+<!--&lt;!&ndash;        crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->

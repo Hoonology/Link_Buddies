@@ -1,0 +1,20 @@
+i{
+    color: #ccc;
+}
+
+a{
+color: black;
+text-decoration: none;
+}
+
+td{
+ width : 25em;
+}
+td.no{
+width: 5em;
+text-align: center;
+}
+
+td.answered, td.notanswered{
+width: 7em;
+}

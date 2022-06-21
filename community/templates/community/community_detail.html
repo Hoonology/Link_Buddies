@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="content_bx">
+<p class="author">{{content.author}}</p>
+<p class="create_date">{{content.create_date}}</p>
+<p class="content"></p>
+<!--    <img>-->
+<p class="category">{{content.category}}</p>
+<div class="likes">
+    <img src="" alt="">
+    <p class="likes"></p>
+</div>
+    <div class="comment">
+    <img src="" alt="">
+<p class="comment"></p>
+</div>
+</div>
+<hr>
+<div class="comment_bx">
+{% for comment in comment_list%}
+    <p class="user">{{comment.user}}</p>
+    <p class="comment">{{comment.comment}}</p>
+    <p class="create_date">{{comment.create_date}}</p>
+    {%endfor%}
+</div>
+
+<form method="post">
+{% csrf_token %}
+<div class="edit_comment">
+  <textarea class="form-control" name="comment" id="comment" required autocomplete="off" minlength="1" maxlength="199" placeholder="바르고 고운 말을 사용합시다." cols="60" rows="3"></textarea>
+<!--    <input type="hidden" value="hiddencss : resize:none">-->
+  <button class="upload" type="submit"></button>
+</div>
+</form>
+
+{% endblock %}
